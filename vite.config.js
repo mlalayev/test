@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  base: '/',
+  plugins: [react()],
   build: {
-    outDir: 'dist', // Vercel, `dist` klasörünü bekler
-    sourcemap: true  // Debug için opsiyonel
+    outDir: 'dist', // Build dosyaları bu klasöre çıkacak
   }
 });
